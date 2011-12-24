@@ -1,0 +1,26 @@
+
+This is a python script to export given areas of a Inkscape SVG file to PNG.
+
+Prerequisutes:
+ 1. lxml - http://lxml.de/
+ 2. Python 2.7
+
+Usage:
+
+for each area you want to export:
+    1. Create a square over the area to export.
+    2. Open the XML editor, and add a node named "export" child of the recently
+      created square.
+    3. On the created node set an attribute "file" to a file name you want.
+    4. Save you work, fire a shell and type (assuming you've got a file "foo.svg")
+        $ python pngfromiksvg.py foo.svg
+       One PNG file for each square you created a "export" node should be created
+       in the current working directory.
+
+   WARNING: All PNG files will be replaced without asking so.
+
+
+Use this at your own risk.
+
+
+
